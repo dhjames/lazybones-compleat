@@ -1,0 +1,23 @@
+= lazybones-compleat
+
+Command line auto-compleation for lazybones
+
+Sometimes it can be hard to rember the name of the lazybones template that you want to run. You can always run 
+----
+lazybones list
+----
+but, remeber... we are lazy. 
+
+If you are like me, you probably use the same template over and over, but not quite enough to remeber the exact spelling. 
+
+This is a start on lazybones auto-compleation for bash and zsh using the https://github.com/mbrubeck/compleat[compleat] DSL. 
+
+----
+lazybones create <tab> 
+----
+
+will show you the names of cached templates (ones you have run before). 
+
+NOTE: I am too lazy to type out 'lazybones', so I created an 'lb' alias.
+
+There is some setup required, but we will worry about that later. It takes a little bit of work to be this lazy. 

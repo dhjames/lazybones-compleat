@@ -1,0 +1,13 @@
+lazybones <create> | <generate> | <list> | <info> | <help>;
+
+create = create [--help] <cached_template> [<version>] <dir> [<create_opts>] ...;
+create_opts = -P <variable> | --spaces <count> | --with-git;
+generate = generate [--help] <sub_template> [-P <variable> | --spaces <count>] ...;
+list = list [--help | --cached];
+info = info [--help] <template>;
+help = help [create | generate | list | info];
+
+template = ! lazybones list | grep -v 'Available templates' | grep '[a-z]' | sed 's/^ *//';
+cached_template = ! ls -1 $HOME/.lazybones/templates/ | sed 's/-[^-]*$//';
+version = ! ls -1 $HOME/.lazybones/templates | sed 's/.*-//' | sed 's/\.zip//';
+
